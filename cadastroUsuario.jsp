@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Cadastro de usuário</title>
+<title>Cadastro de usuÃ¡rio</title>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="resources/css/cadastro.css">
 <link rel="stylesheet" type="text/css" href="resources/css/tabela.css">
@@ -22,7 +22,7 @@
 	<a href="/curso-jsp/">Sair</a>
 	<h1>
 
-		<center>Cadastro de usuário</center>
+		<center>Cadastro de usuÃ¡rio</center>
 	</h1>
 	<h3 style="color: red;">
 		<center>${msg}</center>
@@ -120,7 +120,7 @@
 	<form action="consultarTodos" method="get" id="formUser">
 		<div class="container">
 			<table class="responsive-table">
-				<caption>Usuários cadastrados</caption>
+				<caption>UsuÃ¡rios cadastrados</caption>
 				<tr>
 					<th>ID</th>
 					<th>Login</th>
@@ -171,7 +171,7 @@
 							test="${user.curriculoBase64.isEmpty() || user.curriculoBase64 == null }">
 							<td><img alt="CurriculoImageNotFound"
 								src="resources/img/not-found.png" width="32" height="32"
-								onclick="alert('CURRICULO VÁZIO')"></td>
+								onclick="alert('CURRICULO VÃZIO')"></td>
 						</c:if>
 
 						<td><c:out value="${user.nome}"></c:out></td>
@@ -197,7 +197,7 @@
 		<script type="text/javascript">
 		
 			function validarCampos()
-			//if (document.getElementById('formUser').action != 'salvarUsuario?acao=reset'){
+			if (document.getElementById('formUser').action != 'salvarUsuario?acao=reset'){
 				if (document.getElementById("login").value == "") {
 					alert("Preencha o login");
 					return false;
@@ -210,7 +210,7 @@
 					alert("Preencha o nome");
 					return false;
 				} else if (document.getElementById("cep").value == "") {
-					alert("Preenchimento do CEP é obrigatório!")
+					alert("Preenchimento do CEP Ã© obrigatÃ³rio!")
 					return false;
 				}
 				return true;
@@ -233,14 +233,14 @@
 						//$("#ibge").val(dados.ibge);
 					} //end if.
 					else {
-						//CEP pesquisado não foi encontrado.
+						//CEP pesquisado nÃ£o foi encontrado.
 						$("#cep").val("");
 						$("#rua").val("");
 						$("#bairro").val("");
 						$("#cidade").val("");
 						$("#estado").val("");
 						//$("#ibge").val('');
-						alert("CEP não encontrado.");
+						alert("CEP nÃ£o encontrado.");
 					}
 				});
 
